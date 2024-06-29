@@ -1,17 +1,14 @@
-import { signIn } from "@/auth";
+"use client";
+
+import { signIn } from "next-auth/react";
 
 /**
  * Sample component to trigger NextAuth GH signin process
  */
 export function SignIn() {
     return (
-        <form
-            action={async () => {
-                "use server";
-                await signIn("github");
-            }}
-        >
-            <button type="submit">Signin with GitHub</button>
-        </form>
+        <button onClick={() => signIn("github")}>
+            Sign In
+        </button>
     );
 }
