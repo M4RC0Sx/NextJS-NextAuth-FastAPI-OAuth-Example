@@ -58,7 +58,7 @@ nvm use --lts
 npm install
 ```
 
-5. Create an OAuth application in the GitHub Developer Settings portal and populate an .env.local file with these fields:
+5. Create an OAuth application in the GitHub Developer Settings portal (when creating the app on the GitHub portal, use this URL as the authorization callback URL: http://localhost:3000/api/auth/callback/github) and populate an .env.local file with these fields:
 ```
 AUTH_SECRET=RANDOM_SECRET_USED_BY_NEXTAUTH
 AUTH_GITHUB_ID=YOUR_GITHUB_OAUTH_APP_ID
